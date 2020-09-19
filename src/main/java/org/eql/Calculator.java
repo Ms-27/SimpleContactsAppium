@@ -10,6 +10,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class Calculator {
 	
+	@SuppressWarnings("unused")
 	private AndroidDriver<AndroidElement> driver;
 
 	public Calculator(AndroidDriver<AndroidElement> driver) {

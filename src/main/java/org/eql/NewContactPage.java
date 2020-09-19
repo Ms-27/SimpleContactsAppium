@@ -10,6 +10,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class NewContactPage {
 	
+	@SuppressWarnings("unused")
 	private AndroidDriver<AndroidElement> driver;
 
 	public NewContactPage(AndroidDriver<AndroidElement> driver) {
