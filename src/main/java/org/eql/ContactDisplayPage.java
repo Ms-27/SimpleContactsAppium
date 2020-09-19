@@ -23,7 +23,7 @@ public class ContactDisplayPage {
 	@AndroidFindBy(id="com.simplemobiletools.contacts:id/contact_surname")
 	MobileElement field_surname;
 	
-	@AndroidFindBy(id="com.simplemobiletools.contacts:id/contact_number_holder")
+	@AndroidFindBy(id="com.simplemobiletools.contacts:id/contact_number")
 	MobileElement field_number;
 	
 	@AndroidFindBy(id="com.simplemobiletools.contacts:id/contact_email")
@@ -35,6 +35,4 @@ public class ContactDisplayPage {
 	@AndroidFindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[2]/android.widget.RelativeLayout/android.widget.TextView\r\n")
 	MobileElement btn_delete;
 	
-	@AndroidFindBy(id="	android:id/button1")
-	MobileElement btn_yes;
 }

@@ -43,10 +43,12 @@ private AndroidDriver<AndroidElement> driver;
 	@After
 	public void teardown() {
 		//Suppression du contact avant de quitter le driver
-		ContactDisplayPage page_du_contact = new ContactDisplayPage(driver);
-		page_du_contact.btn_3dots.click();
-		page_du_contact.btn_delete.click();
-		page_du_contact.btn_yes.click();
+		ContactDisplayPage page_contact = new ContactDisplayPage(driver);
+		page_contact.btn_3dots.click();
+		page_contact.btn_delete.click();
+		
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
 		
 		driver.quit();
 	}
@@ -78,6 +80,8 @@ private AndroidDriver<AndroidElement> driver;
 		page_nouveau_contact.btn_save.click();
 		
 		//Consultation de la fiche du nouveau contact
+		ContactsMainPage page_principale2 = new ContactsMainPage(driver);
+		page_principale2.elt_contact.click();
 		ContactDisplayPage page_contact = new ContactDisplayPage(driver);
 		
 		assertEquals(prenom, page_contact.field_first_name.getText());

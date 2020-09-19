@@ -17,9 +17,9 @@ public class ContactsMainPage {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 	
-	@AndroidFindBy(id="com.android.packageinstaller:id/permission_allow_button")
-	MobileElement btn_allow;
-	
 	@AndroidFindBy(id="com.simplemobiletools.contacts:id/fragment_fab")
 	MobileElement btn_add_contact;
+	
+	@AndroidFindBy(id="com.simplemobiletools.contacts:id/contact_name")
+	MobileElement elt_contact;
 }
